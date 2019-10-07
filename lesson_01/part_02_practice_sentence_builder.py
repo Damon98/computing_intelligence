@@ -41,10 +41,11 @@ def sentence_generator(rules,target):
 
 
 def generator_n(n):
-    for i in range (int(n)):
-        print(run(navigate_service_step_1,target='host'))
-        print(run(navigate_service_step_2,target='host'))
-        time.sleep(1)
+    n_result = []
+    for i in range (1,int(n)+1):
+        sent = run(navigate_service_step_1,target='host') + run(navigate_service_step_2,target='host')
+        n_result.append(sent)
+    return n_result
 
 if __name__ == '__main__':
     n = input('生成多少个句子:')

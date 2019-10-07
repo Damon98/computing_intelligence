@@ -21,7 +21,7 @@ import jieba
 # 设计思路：导入语料库 - 清洗（切割，统计）- 生成n-gram模型
 
 # 导入
-STR_PATH = '/Users/damon/computing-intelligence-kkb/source/article_9k.txt'
+STR_PATH = '/Users/damon/文档/kkb/source/article_9k.txt'
 with open (STR_PATH,'r',encoding='utf-8') as f:
     corpus = f.read()
 
