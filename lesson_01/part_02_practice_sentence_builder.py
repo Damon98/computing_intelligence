@@ -39,8 +39,13 @@ def sentence_generator(rules,target):
     else:
         return target
 
-n = input("生成多少个句子:")
-for i in range (int(n)):
-    print(run(navigate_service_step_1,target='host'))
-    print(run(navigate_service_step_2,target='host'))
-    time.sleep(1)
+
+def generator_n(n):
+    for i in range (int(n)):
+        print(run(navigate_service_step_1,target='host'))
+        print(run(navigate_service_step_2,target='host'))
+        time.sleep(1)
+
+if __name__ == '__main__':
+    n = input('生成多少个句子:')
+    generator_n(n)
